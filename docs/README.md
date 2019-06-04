@@ -4,7 +4,7 @@ If you have created documents to use with this lesson plan, please provide a lin
 
 #Documents: 
 
-The lession are broken into two part to make the subject understandable to all.  
+The lesson is broken into two parts to make the subject understandable to all.  
 
 1. WP CLI Part 1
 2. WP CLI Part 2
