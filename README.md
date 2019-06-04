@@ -1,19 +1,18 @@
-# Repo Structure and Lesson Plan Template
-
-> Please remove all blockquote comments such as this before publishing.
+# WP CLI
 
 ## Description
 
-> A short paragraph explaining what is covered in the lesson plan. This should be text that can be copied and used in a meetup or workshop description.
+In this lesson, you'll learn how to use the WP CLI, what they are, when you should use them and how it helps you in your WordPress development.
 
 ## Objectives
 
-After completing this lesson, participants will be able to:
+After completing this lesson, you will be able to:
 
-* Objective 1
-* Objective 2
-
-> It’s required that you include a bulleted list of objective(s) for each lesson plan. Objectives should be worded as actions that the participant can do once they’ve finished. See [Bloom's Taxonomy of Action Verbs](http://www.fresnostate.edu/academics/oie/documents/assesments/Blooms%20Level.pdf) (PDF) as a reference. Avoid using words like "know," "understand," "be introduced to," etc.
+* Install the WordPress using the Commands.
+* You can easily mentioned the WordPress version during the installation.
+* Installing Themes and Plugins using commands. 
+* Activating Theme and Plugins.
+* Create backups and setup the WordPress in few minutes.
 
 ## Target Audience
 
@@ -21,7 +20,7 @@ Who is this lesson intended for? What interests/skills would they bring? Choose 
 
 * [ ] Users
 * [ ] Designers
-* [ ] Developers
+* [X] Developers
 * [ ] Speakers
 * [ ] All
 
@@ -29,141 +28,219 @@ Who is this lesson intended for? What interests/skills would they bring? Choose 
 
 How much experience would a participant need to get the most from this lesson?
 
-* [ ] Beginner
-* [ ] Intermediate
-* [ ] Advanced
-* [ ] Any
+* [x] Beginner
+* [x] Intermediate
+* [x] Advanced
+* [x] Any
 
 ## Type of Instruction
 
 Which strategies will be used for this lesson plan? Choose all that apply.
 
-* [ ] Demonstration
+* [X] Demonstration
 * [ ] Discussion
-* [ ] Exercises
+* [X] Exercises
 * [ ] Feedback
-* [ ] Lecture (Presentation)
-* [ ] Show & Tell
+* [x] Lecture (Presentation)
+* [x] Show & Tell
 * [ ] Tutorial
 
-## Time Estimate (Duration)
 
-How long will it take to teach this lesson (in minutes)?
+## Prerequisite Requirements
 
-____ minutes
 
-## Prerequisite Skills
+Before installing WP-CLI, please make sure the  environment meets the minimum requirements:
 
-Participants will get the most from this lesson if they have familiarity with:
+1. UNIX-like environment (OS X, Linux, FreeBSD, Cygwin); limited support in Windows environment.
 
-* Skill 1
-* Skill 2
+2. PHP 5.4 or later
 
-> _For example:_
->
-> *   Experience with HTML and CSS
-> *   Completed the Basic WordPress Concepts lesson
+3. WordPress 3.7 or later. Versions older than the latest WordPress release may have degraded functionality
 
-## Readiness Questions
 
-* Question 1
-* Question 2
+Note that, SSH access is mandatory to use WP CLI commands inorder to use in Hosting server. Before using it check whether the WP CLI is installed at your hosting server or machine. 
 
-> A list of questions for participants to see if they have the background and skills necessary to learn and understand the lesson.
->
-> _For example:_
->
-> *   Do you want to makes changes to your theme yourself?
-> *   Do you know how to write CSS?
+## What is WP CLI
 
-## Slides
+WP-CLI is the official command line tool which allows to manage WordPress web sites from the command prompt. Updates can be performed, backups can be generated, new posts can be published and most of the admin actions can be performed with a set of commands.
 
-*   [Slides](https://wptrainingteam.github.io/lesson-plans/repo-name/slides/) (files included in this repo)
+WP command line interface use to complete admin tasks like upgrades, database backup creation, plugins and themes installations and removals, publishing and deleting posts, changing site's URL settings and getting help on chosen commands.
 
-## Materials Needed
+## Assets
 
-* Item 1
-* Item 2
+* Setup to install and run WordPress [ PHP, MySQL ]
 
-> A list of files, resources, equipment, or other materials the instructor will need to teach the lesson.
->
-> _For example:_
->
-> *   A local install of WordPress
-> *   The files for the TwentySixteen theme
+## Before Start :
 
-## Notes for the Instructor
+* Are you familiar with the WordPress and installation process of it?
+* Are you familiar with the Command Line Interface commands, like DOS and Linux ? 
 
-* Note 1
-* Note 2
+## Teacher Notes
 
-> A list of any handy tips or other information for the instructor.
->
-> _For example:_
->
-> *  Participants may need to download the TwentySixteen theme before beginning
-> *  What to do if there’s no projector or internet available
-> *  What to do if a participant doesn’t have the necessary set up
-> *  How to handle different opinions about the topic
+* **Time Estimate:** 45 minutes
 
-## Lesson Outline
+## Table Of Content
 
-* First do this
-* Then move on to this
-* Finish with this
+* WP CLI Installation.
+* Download and Install WordPress using WP CLI.
+* Working with Themes using WP CLI.
+* Working with Plugins using WP CLI.
+* Setting Permalinks using WP CLI.
+* Working with Database using WP CLI.
+* Explaining Automated Installation Process using WP CLI.
 
-> The plan for the lesson. Outline form works well.
->
-> _For example:_
->
-> * Talk about what a theme is
-> * Demonstrate how to install and activate a theme
-> * Practice exercises to have participants find and install a theme on their own site
+### WP CLI Installation.
 
-## Exercises
+First to check whether WP CLI is install with you or not, 
+How to check : 
+wp --version [ It will show the wp cli version installed ] 
 
-**Exercise name**
+If Prerequisite Requirements are satisfied, please follow the steps : 
+  
+```
+curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar // download the wpcli phar
+php wp-cli.phar --info // check whether the phar file is working  
+chmod +x wp-cli.phar   // change permission of phar file to access from anywhere
+sudo mv wp-cli.phar /usr/local/bin/wp // move to global folder
+wp --info  //to check the installation
 
-Short description of what the exercise does and what skills or knowledge it reinforces.
+```
+Now WP CLI installed and ready to use for further purposes. 
 
-*   Short point or step of the exercise
-*   And another one
+### Download and Install WordPress using WP CLI.
 
-> These are short or specific activities that help participants practice certain components of the lesson. They should not be fully scripted exercises, but rather something that participants could do on their own. For example, you can create an exercise based on one step of the Example Lesson.
+To start further proceeding with the WP CLI, first we need to create the installation folder in the root directory of Web Server. 
 
-## Assessment
+Assuming that Apache WebServer installed : 
 
-**Write out the question.**
+```
+cd /var/www/html
+mkdir firstinstallation
+cd firstinstallation
+```
 
-1.  Option
-2.  Option
-3.  Option
-4.  Option
+Now we are inside the project folder where we are going to install WordPress using WP CLI commands. 
 
-**Answer:** 3\. Correct answer
+* Downloading WordPress with and without mentioning the specific versions, using anyone of it will download the WordPress. 
+```
+wp core download
+wp core download --version=4.5.1
+```
+* Now we need to create the wp-config.php file through the command, here following setting values will varies : 
 
-> A few questions to ask participants to evaluate their retention of the material presented. They should be a measure of whether the objectives were reached. Consider having a question for each objective.
+1.  DataBase Name : <databasename> good to set same as project name
+2.  DataBase UserName : <username> 
+3.  DataBase Password : <password> 
+4.  DataBase HostName : <hostname> 
 
-## Additional Resources
+```
+wp core config --dbname=<databasename> --dbuser=<username> --dbpass=<password> --dbhost=<hostname> 
+```
+wp-config file is generated, success message will be shown in your command line screen
 
-* Resource 1
-* Resource 2
+* Creating DataBase for your Installation, assuming no database in same name is not pre-exists
 
-> An optional section which can contain a list of resources that the instructor can use to get more information on the topic.
->
-> _For example:_
->
-> * Link to information on the Codex
-> * Theme Review Team's Handbook
+```
+wp db create 
+```
+DataBase will be created successfully and message will be shown. 
 
-## Example Lesson
+* Now the installation process need to run, here few settings will varies 
 
-> An example of how the lesson plan can be implemented. Written in script form as one possible way an instructor might use this lesson plan at an event, with screenshots and instructions if necessary.
+1. URL : Project URL i.e http://localhost/firstinstallation
+2. Title : Project Title, set it with folder name or project name i.e firstinstallation
+3. Admin User : anything except admin [ Recomended ]
+4. Admin Password : anything except admin [ Recomended ]
+4. Admin Email : any email as admin email
 
-### Section Heading for Example Lesson
+```
+wp core install --url="http://localhost/firstinstallation" --title="firstinstallation" --admin_user="<admin_username>" --admin_password="<admin_password>" --admin_email="<admin_email>"
+```
 
-> You will likely need to break the Example Lesson down into multiple sections.
+* It will install the WordPress in given url and activate the default theme like TwentyNineteen or else. 
 
-### Lesson Wrap Up
 
-![](https://raw.githubusercontent.com/wptrainingteam/contributor-resources/master/images/lightbulb.png) Follow with the Exercises and Assessment outlined above.
+### Working with Themes using WP CLI.
+
+* To Install and Activate any theme from wordpress.org. Astra is a popular theme available in wordpress.org. Just use the Slug or Theme Name to install. Internet connection is mandatory to get the new theme.
+
+``` 
+wp theme install astra // it will install the theme from wordpress.org
+wp theme install astra --activate //it will install the theme and activate it
+wp theme activate twentynineteen // activate the existing theme
+```
+
+* To delete the theme from your project. It will not delete activated theme.
+
+```
+wp theme delete astra // it will delete the theme 
+wp theme delete twentynineteen //Can't delete the currently active theme
+```
+
+
+### Working with Plugins using WP CLI.
+
+* WP CLI can install & activate any available plugins in wordpress.org. Also can activate any existing plugins. It works with the plugin slug [ contact-form-7 / wordpress-importer ]. Internet connection is mandatory to get the new plugins.
+
+```
+wp plugin install contact-form-7 // it will install the plugin
+wp plugin install contact-form-7  --activate // it will install & activate the plugin
+
+``` 
+
+* Deactivate and Delete the existing plugins 
+
+```
+wp plugin deactivate contact-form-7 // it will deactivate the existing plugin
+wp plugin delete contact-form-7 //it will deactivate and delete the existing plugin
+```
+
+### Setting Permalinks using WP CLI.
+
+* WP CLI can be use to set the permalink structure as per the need, .htaccess file should have the writable permission. 
+
+```
+wp rewrite structure '/%postname%/' // write permalink to post name
+wp rewrite flush --hard // To clear cache after setting up the site
+```
+
+### Working with Database using WP CLI.
+
+* Here we have already learned to create the DataBase, WP CLI can be use to do few more with the DataBase. 
+
+* To create and drop the database.
+```
+wp db create // it will create database, name mentioned in wp-config.php 
+wp db drop --yes //it will drop the existing database 
+```
+
+* Export the existing database into the file 
+
+```
+wp db export db_exported.txt // it will export the full db to a file named db_exported.txt
+```
+
+* Import DataBase from a existing file 
+```
+wp db import db_exported.txt //it will import the db from already exported file.
+```
+
+#### Summary
+
+* WP CLI is most wonderful and smooth way to installing the WordPress using the Command Line Interface. It will very helpful in deployment from any repository to SSH enabled server. 
+
+#### Exercises
+
+* Try to create a set of Command in a Script [ Probably Shell Script, which will run all the above process to install by asking inputs from the users ]
+
+Please clone or download the repo and try it out : https://github.com/trisghosh/wordpress-automated-script.  
+
+
+#### References 
+
+1. https://wp-cli.org/
+2. https://github.com/trisghosh/wordpress-automated-script  
+3. https://make.wordpress.org/cli/handbook/installing/
+
+
+
