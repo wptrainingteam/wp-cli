@@ -58,7 +58,7 @@ Before installing WP-CLI, please make sure the  environment meets the minimum re
 3. WordPress 3.7 or later. Versions older than the latest WordPress release may have degraded functionality
 
 
-Note that, SSH access is mandatory to use WP CLI commands inorder to use in Hosting server. Before using it check whether the WP CLI is installed at your hosting server or machine. 
+Note that, SSH access is mandatory to use WP CLI commands in order to use in Hosting server. Before using it check whether the WP CLI is installed at your hosting server or machine. 
 
 ## What is WP CLI
 
@@ -149,8 +149,8 @@ DataBase will be created successfully and message will be shown.
 
 1. URL : Project URL i.e http://localhost/firstinstallation
 2. Title : Project Title, set it with folder name or project name i.e firstinstallation
-3. Admin User : anything except admin [ Recomended ]
-4. Admin Password : anything except admin [ Recomended ]
+3. Admin User : anything except admin [ Recommended ]
+4. Admin Password : anything except admin [ Recommended ]
 4. Admin Email : any email as admin email
 
 ```
@@ -241,6 +241,3 @@ Please clone or download the repo and try it out : https://github.com/trisghosh/
 1. https://wp-cli.org/
 2. https://github.com/trisghosh/wordpress-automated-script  
 3. https://make.wordpress.org/cli/handbook/installing/
-
-
-
