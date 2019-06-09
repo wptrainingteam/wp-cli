@@ -128,22 +128,22 @@ wp core download --version=4.5.1
 ```
 * Now we need to create the wp-config.php file through the command, here following setting values will varies : 
 
-1.  DataBase Name : <databasename> good to set same as project name
-2.  DataBase UserName : <username> 
-3.  DataBase Password : <password> 
-4.  DataBase HostName : <hostname> 
+1.  Database Name : <databasename> good to set same as project name
+2.  Database UserName : <username> 
+3.  Database Password : <password> 
+4.  Database HostName : <hostname> 
 
 ```
 wp core config --dbname=<databasename> --dbuser=<username> --dbpass=<password> --dbhost=<hostname> 
 ```
 wp-config file is generated, success message will be shown in your command line screen
 
-* Creating DataBase for your Installation, assuming no database in same name is not pre-exists
+* Creating Database for your Installation, assuming no database in same name is not pre-exists
 
 ```
 wp db create 
 ```
-DataBase will be created successfully and message will be shown. 
+Database will be created successfully and message will be shown. 
 
 * Now the installation process need to run, here few settings will varies 
 
@@ -206,7 +206,7 @@ wp rewrite flush --hard // To clear cache after setting up the site
 
 ### Working with Database using WP CLI.
 
-* Here we have already learned to create the DataBase, WP CLI can be use to do few more with the DataBase. 
+* Here we have already learned to create the Database, WP CLI can be use to do few more with the Database. 
 
 * To create and drop the database.
 ```
@@ -220,7 +220,7 @@ wp db drop --yes //it will drop the existing database
 wp db export db_exported.txt // it will export the full db to a file named db_exported.txt
 ```
 
-* Import DataBase from a existing file 
+* Import Database from a existing file 
 ```
 wp db import db_exported.txt //it will import the db from already exported file.
 ```
