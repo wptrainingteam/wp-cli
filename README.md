@@ -73,7 +73,7 @@ WP command line interface use to complete admin tasks like upgrades, database ba
 ## Before Start :
 
 * Are you familiar with the WordPress and installation process of it?
-* Are you familiar with the Command Line Interface commands, like DOS and Linux ? 
+* Are you familiar with the Command Line Interface commands, like DOS and Linux? 
 
 ## Teacher Notes
 
