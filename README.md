@@ -1,8 +1,8 @@
-# WP CLI
+# WP-CLI
 
 ## Description
 
-In this lesson, you'll learn how to use the WP CLI, what they are, when you should use them and how it helps you in your WordPress development.
+In this lesson, you'll learn how to use the WP-CLI, what they are, when you should use them and how it helps you in your WordPress development.
 
 ## Objectives
 
@@ -58,9 +58,9 @@ Before installing WP-CLI, please make sure the  environment meets the minimum re
 3. WordPress 3.7 or later. Versions older than the latest WordPress release may have degraded functionality
 
 
-Note that, SSH access is mandatory to use WP CLI commands in order to use in Hosting server. Before using it check whether the WP CLI is installed at your hosting server or machine. 
+Note that, SSH access is mandatory to use WP-CLI commands in order to use in Hosting server. Before using it check whether the WP-CLI is installed at your hosting server or machine. 
 
-## What is WP CLI
+## What is WP-CLI
 
 WP-CLI is the official command line tool which allows to manage WordPress web sites from the command prompt. Updates can be performed, backups can be generated, new posts can be published and most of the admin actions can be performed with a set of commands.
 
@@ -73,7 +73,7 @@ WP command line interface use to complete admin tasks like upgrades, database ba
 ## Before Start :
 
 * Are you familiar with the WordPress and installation process of it?
-* Are you familiar with the Command Line Interface commands, like DOS and Linux ? 
+* Are you familiar with the Command Line Interface commands, like DOS and Linux? 
 
 ## Teacher Notes
 
@@ -81,17 +81,17 @@ WP command line interface use to complete admin tasks like upgrades, database ba
 
 ## Table Of Content
 
-* WP CLI Installation.
-* Download and Install WordPress using WP CLI.
-* Working with Themes using WP CLI.
-* Working with Plugins using WP CLI.
-* Setting Permalinks using WP CLI.
-* Working with Database using WP CLI.
-* Explaining Automated Installation Process using WP CLI.
+* WP-CLI Installation.
+* Download and Install WordPress using WP-CLI.
+* Working with Themes using WP-CLI.
+* Working with Plugins using WP-CLI.
+* Setting Permalinks using WP-CLI.
+* Working with Database using WP-CLI.
+* Explaining Automated Installation Process using WP-CLI.
 
-### WP CLI Installation.
+### WP-CLI Installation.
 
-First to check whether WP CLI is install with you or not, 
+First to check whether WP-CLI is install with you or not, 
 How to check : 
 wp --version [ It will show the wp cli version installed ] 
 
@@ -105,11 +105,11 @@ sudo mv wp-cli.phar /usr/local/bin/wp // move to global folder
 wp --info  //to check the installation
 
 ```
-Now WP CLI installed and ready to use for further purposes. 
+Now WP-CLI installed and ready to use for further purposes. 
 
-### Download and Install WordPress using WP CLI.
+### Download and Install WordPress using WP-CLI.
 
-To start further proceeding with the WP CLI, first we need to create the installation folder in the root directory of Web Server. 
+To start further proceeding with the WP-CLI, first we need to create the installation folder in the root directory of Web Server. 
 
 Assuming that Apache WebServer installed : 
 
@@ -119,7 +119,7 @@ mkdir firstinstallation
 cd firstinstallation
 ```
 
-Now we are inside the project folder where we are going to install WordPress using WP CLI commands. 
+Now we are inside the project folder where we are going to install WordPress using WP-CLI commands. 
 
 * Downloading WordPress with and without mentioning the specific versions, using anyone of it will download the WordPress. 
 ```
@@ -128,22 +128,22 @@ wp core download --version=4.5.1
 ```
 * Now we need to create the wp-config.php file through the command, here following setting values will varies : 
 
-1.  DataBase Name : <databasename> good to set same as project name
-2.  DataBase UserName : <username> 
-3.  DataBase Password : <password> 
-4.  DataBase HostName : <hostname> 
+1.  Database Name : <databasename> good to set same as project name
+2.  Database UserName : <username> 
+3.  Database Password : <password> 
+4.  Database HostName : <hostname> 
 
 ```
 wp core config --dbname=<databasename> --dbuser=<username> --dbpass=<password> --dbhost=<hostname> 
 ```
 wp-config file is generated, success message will be shown in your command line screen
 
-* Creating DataBase for your Installation, assuming no database in same name is not pre-exists
+* Creating Database for your Installation, assuming no database in same name is not pre-exists
 
 ```
 wp db create 
 ```
-DataBase will be created successfully and message will be shown. 
+Database will be created successfully and message will be shown. 
 
 * Now the installation process need to run, here few settings will varies 
 
@@ -160,7 +160,7 @@ wp core install --url="http://localhost/firstinstallation" --title="firstinstall
 * It will install the WordPress in given url and activate the default theme like TwentyNineteen or else. 
 
 
-### Working with Themes using WP CLI.
+### Working with Themes using WP-CLI.
 
 * To Install and Activate any theme from wordpress.org. Astra is a popular theme available in wordpress.org. Just use the Slug or Theme Name to install. Internet connection is mandatory to get the new theme.
 
@@ -178,9 +178,9 @@ wp theme delete twentynineteen //Can't delete the currently active theme
 ```
 
 
-### Working with Plugins using WP CLI.
+### Working with Plugins using WP-CLI.
 
-* WP CLI can install & activate any available plugins in wordpress.org. Also can activate any existing plugins. It works with the plugin slug [ contact-form-7 / wordpress-importer ]. Internet connection is mandatory to get the new plugins.
+* WP-CLI can install & activate any available plugins in wordpress.org. Also can activate any existing plugins. It works with the plugin slug [ contact-form-7 / wordpress-importer ]. Internet connection is mandatory to get the new plugins.
 
 ```
 wp plugin install contact-form-7 // it will install the plugin
@@ -195,18 +195,18 @@ wp plugin deactivate contact-form-7 // it will deactivate the existing plugin
 wp plugin delete contact-form-7 //it will deactivate and delete the existing plugin
 ```
 
-### Setting Permalinks using WP CLI.
+### Setting Permalinks using WP-CLI.
 
-* WP CLI can be use to set the permalink structure as per the need, .htaccess file should have the writable permission. 
+* WP-CLI can be use to set the permalink structure as per the need, .htaccess file should have the writable permission. 
 
 ```
 wp rewrite structure '/%postname%/' // write permalink to post name
 wp rewrite flush --hard // To clear cache after setting up the site
 ```
 
-### Working with Database using WP CLI.
+### Working with Database using WP-CLI.
 
-* Here we have already learned to create the DataBase, WP CLI can be use to do few more with the DataBase. 
+* Here we have already learned to create the Database, WP-CLI can be use to do few more with the Database. 
 
 * To create and drop the database.
 ```
@@ -220,14 +220,14 @@ wp db drop --yes //it will drop the existing database
 wp db export db_exported.txt // it will export the full db to a file named db_exported.txt
 ```
 
-* Import DataBase from a existing file 
+* Import Database from a existing file 
 ```
 wp db import db_exported.txt //it will import the db from already exported file.
 ```
 
 #### Summary
 
-* WP CLI is most wonderful and smooth way to installing the WordPress using the Command Line Interface. It will very helpful in deployment from any repository to SSH enabled server. 
+* WP-CLI is most wonderful and smooth way to installing the WordPress using the Command Line Interface. It will very helpful in deployment from any repository to SSH enabled server. 
 
 #### Exercises
 
