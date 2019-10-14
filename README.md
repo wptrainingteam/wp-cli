@@ -93,7 +93,7 @@ WP command line interface use to complete admin tasks like upgrades, database ba
 
 First to check whether WP-CLI is install with you or not, 
 How to check : 
-wp --version [ It will show the wp cli version installed ] 
+wp --version [ It will show the wp-cli version installed ] 
 
 If Prerequisite Requirements are satisfied, please follow the steps : 
   
