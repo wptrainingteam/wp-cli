@@ -235,7 +235,7 @@ You can also create list with inner navigation by adding `next` class to each el
 	<ol>
 		<li>I'll be seen right away.</li>
 		<li>Just navigate to next slide and you'll see others.</li>
-		<li class="next">Hey! It's all okay ?</li>
+		<li class="next">Hey! It's all okay?</li>
 		<li class="next"> ... </li>
 	</ol>
 
