@@ -235,7 +235,7 @@ You can also create list with inner navigation by adding `next` class to each el
 	<ol>
 		<li>I'll be seen right away.</li>
 		<li>Just navigate to next slide and you'll see others.</li>
-		<li class="next">Hey! It's all okay ?</li>
+		<li class="next">Hey! It's all okay?</li>
 		<li class="next"> ... </li>
 	</ol>
 
@@ -375,7 +375,7 @@ Use `place` class on img attribute give same effect as `cover` class - set backg
 		<img class="place" src="picture.png">
 	</section>
 
-If you want collocate picture at a certain side, you need to use `top` / `right` / `bottom` / `left` class as shown below
+If you want collocated picture at a certain side, you need to use `top` / `right` / `bottom` / `left` class as shown below
 
 	<img class="place top" src="picture.png">
 	<img class="place right" src="picture.png">
